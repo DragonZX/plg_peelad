@@ -23,20 +23,19 @@
 <config>
 <fields name="params" >
 <fieldset name="Basic">
-<field name="peelad_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYS_PEELAD_ENABLED" description="PLG_SYS_SS_ENABLED_DESC">
+<field name="peelad_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYS_PEELAD_ENABLED" description="PLG_SYS_PEELAD_ENABLED_DESC">
 <option value="0">JNo</option>
 <option value="1">JYes</option>
 </field>
-<field name="peelad_jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYS_SS_YM_NOINDEX_WRAPPER" description="PLG_SYS_SS_NOINDEX_WRAPPER_DESC">
+<field name="peelad_jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="PLG_SYS_PEELAD_JQUERY" description="PLG_SYS_PEELAD_JQUERY_DESC">
 <option value="google">From Google</option>
 <option value="local1">Local v1.x</option>
 <option value="local2">Local v2.x</option>
 <option value="external">External</option>
 </field>
-<field name="peelad_path" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_SYS_SS_MR_ENABLED" description="PLG_SYS_SS_ENABLED_DESC">
+<field name="peelad_path" type="text" class="btn-group btn-group-yesno" default="0" label="PLG_SYS_PEELAD_PATH" description="PLG_SYS_PEELAD_PATH_DESC">
 <option value="0">JNo</option>
 <option value="1">JYes</option>
-</field>
 </field>
 </fieldset>
 </fields>
