@@ -10,11 +10,12 @@
 <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 <description>PLG_PEELAD_XML_DESCRIPTION</description>
 <files>
-<folder>language</folder>
+<folder>styles</folder>
+<folder>js</folder>
 <filename plugin="peelad">peelad.php</filename>
 <filename>index.html</filename>
 </files>
-<languages>
+<languages folder="languages">
 <language tag="en-GB">language/en-GB/en-GB.plg_system_peelad.ini</language>
 <language tag="en-GB">language/en-GB/en-GB.plg_system_peelad.sys.ini</language>
 <language tag="ru-RU">language/ru-RU/ru-RU.plg_system_peelad.ini</language>
