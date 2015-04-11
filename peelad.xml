@@ -28,7 +28,7 @@
 <option value="0">JNo</option>
 <option value="1">JYes</option>
 </field>
-<field name="peelad_jquery" type="radio" class="" default="1" label="PLG_SYS_PEELAD_JQUERY" description="PLG_SYS_PEELAD_JQUERY_DESC">
+<field name="peelad_jquery" type="radio" class="" default="google" label="PLG_SYS_PEELAD_JQUERY" description="PLG_SYS_PEELAD_JQUERY_DESC">
 <option value="google">From Google</option>
 <option value="local1">Local v1.x</option>
 <option value="local2">Local v2.x</option>
