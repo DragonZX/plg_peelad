@@ -1,7 +1,7 @@
 <?php
 # @version $version 0.1 Amvis United Company Limited $
 # @copyright Copyright (C) 2014 AUnited Co Ltd. All rights reserved.
-# @license PeelAd has been originally created by Vitaliy Zhukov under GNU/GPL and relicensed under Apache v2.0, see LICENSE
+# @license PeelAd has been originally created by Vitaliy Zhukov under Apache v2.0, see LICENSE
 # Updated 1st March 2015
 #
 # Site: http://aunited.ru
@@ -60,7 +60,7 @@ class plgSystemSunStat extends JPlugin
         autoAnimate: true
       });
     });
-  </script>"
+  </script>";
 		
 		$buffer = preg_replace ("/<\/body>/", $javascript."\n\n</body>", $buffer);
 		
@@ -68,5 +68,6 @@ class plgSystemSunStat extends JPlugin
 		JResponse::setBody($buffer);
 		
 		return true;
-		
+		}
+	}		
 ?>
