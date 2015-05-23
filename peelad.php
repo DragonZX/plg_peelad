@@ -27,6 +27,7 @@ class plgSystemPeelAd extends JPlugin
 		}
 	function onAfterRender()
 		{
+		$app = JFactory::getApplication();
 		if($app->isAdmin())
 			{
 				return;
@@ -37,6 +38,8 @@ class plgSystemPeelAd extends JPlugin
 		$peelad_jquery = $this->params->get( 'peelad_jquery', '' );
 		$peelad_path = $this->params->get( 'peelad_image', '' );
 		$peelad_link = $this->params->get( 'peelad_link', '' );
+		
+		$buffer = JResponse::getBody();
 		
 		switch($peelad_jquery) {
 			case 'google': $jqlink='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'; break;
@@ -61,7 +64,7 @@ class plgSystemPeelAd extends JPlugin
       });
     });
   </script>";
-		
+  
 		$buffer = preg_replace ("/<\/body>/", $javascript."\n\n</body>", $buffer);
 		
 		//output the buffer
