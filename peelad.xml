@@ -8,7 +8,7 @@
 <version>0.1</version>
 <copyright>Copyright (c) 2015 AUnuted. All rights reserved.</copyright>
 <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-<description>PLG_PEELAD_XML_DESCRIPTION</description>
+<description><![CDATA[PLG_PEELAD_XML_DESCRIPTION]]></description>
 <files>
 <folder>styles</folder>
 <folder>js</folder>
@@ -29,10 +29,10 @@
 <option value="1">JYes</option>
 </field>
 <field name="peelad_jquery" type="radio" class="" default="google" label="PLG_SYS_PEELAD_JQUERY" description="PLG_SYS_PEELAD_JQUERY_DESC">
-<option value="google">From Google</option>
-<option value="local1">Local v1.x</option>
-<option value="local2">Local v2.x</option>
-<option value="external">External</option>
+<option value="google">PLG_SYS_PEELAD_FROM_GOOGLE</option>
+<option value="local1">PLG_SYS_PEELAD_LOCAL_V1X</option>
+<option value="local2">PLG_SYS_PEELAD_LOCAL_V2X</option>
+<option value="external">PLG_SYS_PEELAD_EXTERNAL</option>
 </field>
 <field name="peelad_image" type="filelist" directory="images/peelads" default="0" label="PLG_SYS_PEELAD_PATH" description="PLG_SYS_PEELAD_PATH_DESC" />
 </fieldset>
