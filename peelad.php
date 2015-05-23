@@ -17,12 +17,12 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport( 'joomla.plugin.plugin');
 
-class plgSystemSunStat extends JPlugin
+class plgSystemPeelAd extends JPlugin
 	{
-	function plgSunStat(&$subject, $config)
+	function plgPeelAd(&$subject, $config)
 		{
 		parent::__construct($subject, $config);
-		$this->_plugin = JPluginHelper::getPlugin( 'system', 'SunStat' );
+		$this->_plugin = JPluginHelper::getPlugin( 'system', 'PeelAd' );
 		$this->_params = new JParameter( $this->_plugin->params );
 		}
 	function onAfterRender()
@@ -51,8 +51,8 @@ class plgSystemSunStat extends JPlugin
     $(function() {
       $('body').peelback({
         adImage  : 'images/peelads/peel-ad.png',
-        peelImage  : 'peel1.png',
-        clickURL : 'peelad_link',
+        peelImage  : 'styles/peel1.png',
+        clickURL : '".$peelad_link."',
         smallSize: 50,
         bigSize: 500,
         gaTrack  : true,
