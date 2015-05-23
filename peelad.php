@@ -38,6 +38,7 @@ class plgSystemPeelAd extends JPlugin
 		$peelad_jquery = $this->params->get( 'peelad_jquery', '' );
 		$peelad_path = $this->params->get( 'peelad_image', '' );
 		$peelad_link = $this->params->get( 'peelad_link', '' );
+		$javascript = '';
 		
 		$buffer = JResponse::getBody();
 		
@@ -48,13 +49,13 @@ class plgSystemPeelAd extends JPlugin
 			case 'external': $jqlink=''; break;
 			default: $jqlink='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'; break;
 		}
-		$javascript="<script src='".$jqlink."'></script>
-  <script src=\"jquery.peelback.js\"></script>  
-  <script>
+		if($peelad_enabled){$javascript="<script src='".$jqlink."'></script>
+	<script src=\"plugins/system/peelad/js/jquery.peelback.js\"></script>  
+	<script>
     $(function() {
       $('body').peelback({
         adImage  : 'images/peelads/peel-ad.png',
-        peelImage  : 'styles/peel1.png',
+        peelImage  : 'plugins/system/peelad/styles/peel1.png',
         clickURL : '".$peelad_link."',
         smallSize: 50,
         bigSize: 500,
@@ -63,7 +64,7 @@ class plgSystemPeelAd extends JPlugin
         autoAnimate: true
       });
     });
-  </script>";
+	</script>";};
   
 		$buffer = preg_replace ("/<\/body>/", $javascript."\n\n</body>", $buffer);
 		
