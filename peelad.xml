@@ -34,6 +34,12 @@
 <option value="local2">PLG_SYS_PEELAD_LOCAL_V2X</option>
 <option value="external">PLG_SYS_PEELAD_EXTERNAL</option>
 </field>
+<field name="peelad_codepos" type="radio" class="" default="google" label="PLG_SYS_PEELAD_CODEPOS" description="PLG_SYS_PEELAD_CODEPOS_DESC">
+<option value="bodye">Bodystart</option>
+<option value="bodys">Bodyend</option>
+<option value="headere">Headerend</option>
+<option value="pacomment">On comment</option>
+</field>
 <field name="peelad_image" type="filelist" directory="images/peelads" default="0" label="PLG_SYS_PEELAD_PATH" description="PLG_SYS_PEELAD_PATH_DESC" />
 </fieldset>
 </fields>

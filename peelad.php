@@ -38,6 +38,7 @@ class plgSystemPeelAd extends JPlugin
 		$peelad_jquery = $this->params->get( 'peelad_jquery', '' );
 		$peelad_path = $this->params->get( 'peelad_image', '' );
 		$peelad_link = $this->params->get( 'peelad_link', '' );
+		$peelad_codepos = $this->params->get( 'peelad_codepos', '' );
 		$javascript = '';
 		
 		$buffer = JResponse::getBody();
@@ -66,7 +67,13 @@ class plgSystemPeelAd extends JPlugin
     });
 	</script>";};
   
-		$buffer = preg_replace ("/<\/body>/", $javascript."\n\n</body>", $buffer);
+  switch($peelad_codepos) {
+			case 'bodye': $buffer = preg_replace ("/<\/body>/", $javascript."\n\n</body>", $buffer); break;
+			case 'bodys': $buffer = preg_replace ("/<body>/", "<body>\n\n".$javascript, $buffer); break;
+			case 'headere': $buffer = preg_replace ("/<\/header>/", $javascript."\n\n</header>", $buffer); break;
+			case 'pacomment': $buffer = preg_replace ("/<!-- PeelAd Place -->/", $javascript."\n\n<!-- PeelAd Place -->", $buffer); break;
+			default: $buffer = $buffer = preg_replace ("/<\/header>/", $javascript."\n\n</header>", $buffer); break;
+  }
 		
 		//output the buffer
 		JResponse::setBody($buffer);
